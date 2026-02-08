@@ -25,13 +25,13 @@
 ## 4. Functional Requirements
 ### **4.1 The Academy (LMS)**
 *   **FR.1:** Markdown-based lesson viewer with support for images/diagrams.
-*   **FR.2:** Interactive Quiz engine (Multiple choice + Simulation tasks).
-*   **FR.3:** **Level Locking:** Block "Sell" actions and "Spreads" until the user reaches Level 4.
+*   **FR.2:** Interactive Quiz engine with "Plain English" toggle for jargon translation.
+*   **FR.3:** **Level Locking:** Block "Sell" actions until Level 4. Hedge Lab locked until Level 5.
 
 ### **4.2 The Simulation Engine**
-*   **FR.4:** **Live Data Sync:** Fetch stock prices and option chains every 60 seconds (or on-demand).
-*   **FR.5:** **Black-Scholes Math:** Calculate theoretical P&L for "Time Machine" slider movement.
-*   **FR.6:** **Virtual Wallet:** Handle a starting $10k balance and allow $5k "top-ups."
+*   **FR.4:** **Live Data Sync:** Fetch stock prices and option chains via Yahoo Finance (cached 60s).
+*   **FR.5:** **Black-Scholes Math:** Calculate theoretical P&L for "Time Machine" slider (0-30 days into future).
+*   **FR.6:** **Virtual Wallet:** Start with $10k. "Emergency Fund" adds $5k if balance < $100.
 
 ### **4.3 The Trading Interface**
 *   **FR.7:** **Dual-Theme Toggle:** Switch between "Light (Academy)" and "Dark (Pro Terminal)" modes.
