@@ -342,26 +342,33 @@ const HedgeLab = () => {
                 <graduation-cap size={18} className="text-blue-500" /> Real-World Implementation
               </h4>
               <div className="space-y-4 text-sm text-slate-500 leading-relaxed">
-                <p>
-                  {plainEnglishEnabled 
-                    ? `This is a <strong className="text-slate-800 dark:text-slate-200">Protection Bet</strong>. You buy one ${translate('put', plainEnglishEnabled)} for every 100 shares you own.` 
-                    : `This strategy is called a <strong className="text-slate-800 dark:text-slate-200">Protective Put</strong>. 
-                       In the real world, you would buy 1 Put contract for every 100 shares of stock you own.`}
-                </p>
+                <div>
+                  {plainEnglishEnabled ? (
+                    <p>This is a <strong className="text-slate-800 dark:text-slate-200">Protection Bet</strong>. You buy one {translate('put', plainEnglishEnabled)} for every 100 shares you own.</p>
+                  ) : (
+                    <p>This strategy is called a <strong className="text-slate-800 dark:text-slate-200">Protective Put</strong>. In the real world, you would buy 1 Put contract for every 100 shares of stock you own.</p>
+                  )}
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
                     <p className="font-bold text-slate-800 dark:text-slate-200 mb-1">{plainEnglishEnabled ? "What happened?" : "What just happened?"}</p>
-                    <p>{plainEnglishEnabled 
-                      ? `As the stock dropped, the money you lost on your shares was matched by the money you made on the ${translate('put', plainEnglishEnabled)}. Your wealth stayed safe.` 
-                      : `As the stock price crashed, the <span className="text-rose-500 font-bold">loss</span> on your shares was perfectly offset by the <span className="text-emerald-500 font-bold">profit</span> on the Put option. Your wealth hit a "floor" and stopped falling.`}
-                    </p>
+                    <div>
+                      {plainEnglishEnabled ? (
+                        <p>As the stock dropped, the money you lost on your shares was matched by the money you made on the {translate('put', plainEnglishEnabled)}. Your wealth stayed safe.</p>
+                      ) : (
+                        <p>As the stock price crashed, the <span className="text-rose-500 font-bold">loss</span> on your shares was perfectly offset by the <span className="text-emerald-500 font-bold">profit</span> on the Put option. Your wealth hit a "floor" and stopped falling.</p>
+                      )}
+                    </div>
                   </div>
                   <div className="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
                     <p className="font-bold text-slate-800 dark:text-slate-200 mb-1">{plainEnglishEnabled ? "How to do it?" : "How do I do this?"}</p>
-                    <p>{plainEnglishEnabled 
-                      ? `Go to your broker, pick the stock, and <strong className="text-blue-600">Buy a ${translate('put', plainEnglishEnabled)}</strong> with a ${translate('strike', plainEnglishEnabled)} near the current stock price. This is like buying insurance for your shares.` 
-                      : `Go to your broker, find the stock you own, and <strong className="text-blue-600">Buy a Put</strong> with a strike price near the current price. You pay a small fee (premium) today to guarantee your exit price tomorrow.`}
-                    </p>
+                    <div>
+                      {plainEnglishEnabled ? (
+                        <p>Go to your broker, pick the stock, and <strong className="text-blue-600">Buy a {translate('put', plainEnglishEnabled)}</strong> with a {translate('strike', plainEnglishEnabled)} near the current stock price. This is like buying insurance for your shares.</p>
+                      ) : (
+                        <p>Go to your broker, find the stock you own, and <strong className="text-blue-600">Buy a Put</strong> with a strike price near the current price. You pay a small fee (premium) today to guarantee your exit price tomorrow.</p>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
