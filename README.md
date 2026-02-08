@@ -6,7 +6,7 @@ OptionQuest is a gamified educational platform designed for absolute beginners t
 
 ---
 
-## 🚀 Validated Features
+## 🚀 Features
 
 ### 🎓 The Academy (Learn)
 *   **Interactive Curriculum:** Markdown-based lessons covering calls, puts, and Greeks.
