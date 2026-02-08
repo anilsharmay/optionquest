@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --bg-classroom: #f8fafc;
+  --bg-terminal: #0f172a;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.theme-classroom {
+  background-color: var(--bg-classroom);
+  color: #1e293b;
+}
+
+.theme-terminal {
+  background-color: var(--bg-terminal);
+  color: #f1f5f9;
+}
+
+/* Custom transitions */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar styling for terminal look */
+.theme-terminal ::-webkit-scrollbar {
+  width: 8px;
+}
+.theme-terminal ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+.theme-terminal ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
